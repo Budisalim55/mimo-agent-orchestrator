@@ -1,5 +1,7 @@
 # MiMo Agent Orchestrator
 
+[![CI](https://github.com/Budisalim55/mimo-agent-orchestrator/actions/workflows/ci.yml/badge.svg)](https://github.com/Budisalim55/mimo-agent-orchestrator/actions/workflows/ci.yml)
+
 A lightweight multi-agent workflow runner for OpenAI-compatible model APIs, designed to test Xiaomi MiMo and other LLM providers inside real developer automation loops.
 
 This project demonstrates how I use agentic workflows for:
@@ -76,6 +78,7 @@ Each run creates:
 
 - `runs/<timestamp>/trace.jsonl`
 - `runs/<timestamp>/report.md`
+- `examples/sample-report.md` as a static example of the expected output format
 
 Example report excerpt:
 
@@ -110,6 +113,7 @@ mimo_agent/
   schemas.py      # dataclasses and validators
 examples/
   repo-review.yaml
+  sample-report.md
 tests/
   test_runner.py
 ```
