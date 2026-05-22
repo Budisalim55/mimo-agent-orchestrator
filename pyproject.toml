@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mimo-agent-orchestrator"
+version = "0.1.0"
+description = "A lightweight multi-agent workflow runner for OpenAI-compatible model APIs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Budisalim55"}]
+dependencies = [
+  "httpx>=0.27.0",
+  "PyYAML>=6.0.1",
+  "pydantic>=2.7.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.5.0"]
+
+[project.scripts]
+mimo-agent = "mimo_agent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mimo_agent*"]
+
+[tool.ruff]
+line-length = 100

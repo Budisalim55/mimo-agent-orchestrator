@@ -1,0 +1,12 @@
+name: repo-review-demo
+objective: Review a small repository and produce a prioritized improvement plan.
+steps:
+  - id: planner
+    role: planning agent
+    instruction: Break the objective into concrete review areas.
+  - id: reviewer
+    role: code review agent
+    instruction: Identify risks, missing tests, and maintainability issues.
+  - id: closer
+    role: execution closer
+    instruction: Turn findings into a 5-item action plan.
